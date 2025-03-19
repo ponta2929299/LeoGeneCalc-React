@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Paper} from "@mui/material";
 
 function SearchResults({ results }) {
   const [selectedMorph, setSelectedMorph] = useState(null);
@@ -13,7 +14,7 @@ function SearchResults({ results }) {
   return (
     <div>
       <h2>検索結果</h2>
-
+      
       {allResults.length >0 ? (
       <ul>
         {allResults.map((morph) => (
@@ -25,9 +26,10 @@ function SearchResults({ results }) {
       ):(
         <p>該当するデータがありません。</p>
       )}
-
+      
+      <div>
       {selectedMorph && (
-        <div>
+        <Paper style={{padding:'16px'}}>
           <h3>詳細情報</h3>
           {selectedMorph.combo_morph_name ? (
             <p><strong>コンボモルフ内容: </strong>{selectedMorph.description}</p>
@@ -38,8 +40,9 @@ function SearchResults({ results }) {
              <p><strong>備考: </strong> {selectedMorph.morph_detail || selectedMorph.combo_detail}</p>
             </>
           )}
-        </div>
+        </Paper>
       )}
+      </div>
     </div>
   );
 }

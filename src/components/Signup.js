@@ -1,9 +1,8 @@
 // Register.js
-
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Button, TextField, Box} from "@mui/material"
+import { Button, TextField, Box} from "@mui/material";
 
 function Signup() {
   const [username, setUsername] = useState("");
@@ -26,7 +25,7 @@ function Signup() {
       setError("正しいメールアドレスを入力してください");
       return;
     }
-
+    
     // パスワードの強度チェック（例：8文字以上）
     if (password.length < 8) {
       setError("パスワードは8文字以上で入力してください");
@@ -77,7 +76,7 @@ function Signup() {
           variant="outlined"
           value={password}
           type="password"
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           sx={{ marginRight: 2 }} 
           fullWidth
         />

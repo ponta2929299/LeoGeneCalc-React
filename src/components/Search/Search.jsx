@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SearchResults from "./SearchResult";
-import { Button, TextField } from "@mui/material"
+import { Button, TextField, Grid2} from "@mui/material"
 import SavedSearchIcon from '@mui/icons-material/SavedSearch';
 
 function Search() {
@@ -37,9 +37,10 @@ function Search() {
         >
           検索
         </Button>
-      </div>
-
+      </div> 
+      <Grid2 item xs={12} sm={6}>
         <SearchResults results={results}/>
+      </Grid2>
     </div>
   );
 }

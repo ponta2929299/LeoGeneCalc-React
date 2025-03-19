@@ -16,7 +16,7 @@ function App(){
         <Sidebar style={{display: 'flex',zIndex: 500,}}/>
 
         {/* 左側のコンテンツエリア */}
-        <div style={{display: "flex", justifyContent:"flex-start",paddingTop:100, marginLeft: 50,marginRight: 150,}}>
+        <div style={{display: "flex", justifyContent:"flex-start",paddingTop:100, marginLeft: 50,marginRight: 50,}}>
           <Routes>
             <Route path="/" element={<Search />}/>
             <Route path="/signup" element={<Signup />}/>
